@@ -120,7 +120,12 @@ For each agreed finding:
 
 **Needs approval** (UX changes, architecture, new features):
 → Create GitHub issue with "needs-human" label
-→ Wait for user to approve
+→ Wait for user to approve via EITHER method:
+  1. Remove the "needs-human" label from the issue on GitHub
+  2. Comment "approved" on the issue
+→ When checking issues in Step 1, treat "needs-human" issues as approved if:
+  - The "needs-human" label has been removed, OR
+  - Any comment contains the word "approved" (case-insensitive)
 
 ### Step 11: Check Results
 
