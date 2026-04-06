@@ -50,7 +50,26 @@ If NO open issues → jump to PHASE 2.
 ### Step 2: Pick the Highest Priority Issue
 
 Priority order: critical > must-do > bug > should-do > enhancement > unlabeled
-Skip issues labeled: needs-human, wontfix, in-progress
+
+Skip issues that are:
+- Labeled: wontfix, in-progress
+- Labeled: needs-human AND no "approved" comment AND label still present
+
+#### Handling "needs-human" issues:
+
+Check ALL comments on the issue. The user may have:
+- Commented "approved" → remove "needs-human" label, proceed to fix
+- Commented with feedback/direction (NOT "approved") → the user wants changes to the approach. Read their feedback, revise the plan accordingly, then comment back with the updated proposal. Do NOT fix yet — wait for "approved".
+- Commented "rejected" or "wontfix" → add "wontfix" label, close the issue
+- No comments → skip, check again next cycle
+
+#### Handling user-reported issues:
+
+Not all issues need code fixes. Before starting a fix, read the issue carefully:
+- **Bug report with clear reproduction** → proceed to fix
+- **Feature request** → label "needs-human" if it involves UX/architecture decisions
+- **Question / discussion** → comment with an answer, do NOT make code changes. If the answer reveals a real bug, create a separate issue for the fix.
+- **Vague / unclear issue** → comment asking for clarification, label "needs-human"
 
 ### Step 3: Assess Complexity
 
