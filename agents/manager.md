@@ -49,7 +49,7 @@ Every bug found in Discovery should become a GitHub issue BEFORE being fixed. If
 Check needs-human issues. If a user left feedback and nobody responded, FAIL.
 
 ### Question 5: "Did they hit the safety limit?"
-The orchestrator allows maximum 3 Discovery→Fix loops per cron trigger. If they hit this limit, that's an acceptable stop even if Discovery still found issues. But they must ACKNOWLEDGE they hit the limit, not pretend they're "done."
+The orchestrator allows maximum 10 Discovery→Fix loops per cron trigger. If they hit this limit, that's an acceptable stop even if Discovery still found issues. But they must ACKNOWLEDGE they hit the limit, not pretend they're "done."
 
 ## Your Verdict
 
