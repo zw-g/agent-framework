@@ -120,7 +120,7 @@ For each agreed finding:
 
 **Needs approval** (UX changes, architecture, new features):
 → Create GitHub issue with "needs-human" label
-→ Wait for user to approve via EITHER method:
+→ Do NOT wait — STOP this cycle. The next cron trigger will check if the user approved via EITHER method:
   1. Remove the "needs-human" label from the issue on GitHub
   2. Comment "approved" on the issue
 → When checking issues in Step 1, treat "needs-human" issues as approved if:
