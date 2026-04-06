@@ -143,12 +143,32 @@ DO NOT STOP HERE. You MUST run Discovery after all issues are fixed.
 
 ## PHASE 2: DISCOVERY MODE
 
+Discovery is NOT limited to code bugs. It covers ALL dimensions of product quality.
+
+### Discovery Dimensions (rotate focus each round)
+
+Each Discovery round should focus on 2-3 dimensions. Rotate so all dimensions are covered over multiple rounds. Track which dimensions were last checked.
+
+| Dimension | What to look for | Example findings |
+|-----------|-----------------|------------------|
+| **Code Quality** | Bugs, race conditions, error handling, thread safety | "Line 42 reads X without lock" |
+| **Performance** | Bottlenecks, unnecessary work, slow paths | "LLM loads on every call instead of caching" |
+| **AI/ML Prompts** | LLM system prompts, classifier prompts, ASR context — can they be improved? Research industry best practices, test with examples | "Classifier rejects valid bilingual corrections" |
+| **Documentation** | README accuracy, install instructions, feature descriptions, changelog | "README doesn't mention the auto-dictionary feature" |
+| **UX/Copy** | Menu text, notifications, error messages, onboarding | "Error notification says 'failed' without actionable advice" |
+| **Configuration** | Default settings, dictionary curation, thresholds | "Default max_recording_secs=1800 is too long for most users" |
+| **Dependencies** | Package versions, security vulnerabilities, unused deps | "numpy 1.x has known CVE, upgrade to 2.x" |
+| **Testing** | Missing tests, untested edge cases, test infrastructure | "No automated test for the correction detection flow" |
+| **Architecture** | Code organization, modularity, maintainability | "voice_input.py is 2650 lines — consider splitting" |
+| **DevOps** | Install process, update mechanism, error reporting | "install.sh doesn't verify Python version before setup" |
+
 ### Step 7: Run Deep Analysis
 
 Launch Agent 1 (Researcher):
-- Read the ENTIRE codebase
-- Analyze: bugs, performance, UX, reliability, code quality, security
-- Cross-reference with recent logs
+- Read the ENTIRE codebase AND all supporting files (README, install scripts, config)
+- Pick 2-3 dimensions from the table above (rotate from previous rounds)
+- Analyze deeply within those dimensions
+- Cross-reference with recent logs and industry best practices
 - Produce prioritized findings
 
 ### Step 8: Critique the Analysis
