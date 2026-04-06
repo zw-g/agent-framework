@@ -145,9 +145,7 @@ DO NOT STOP HERE. You MUST run Discovery after all issues are fixed.
 
 Discovery is NOT limited to code bugs. It covers ALL dimensions of product quality.
 
-### Discovery Dimensions (rotate focus each round)
-
-Each Discovery round should focus on 2-3 dimensions. Rotate so all dimensions are covered over multiple rounds. Track which dimensions were last checked.
+### Discovery Dimensions (check ALL every round)
 
 | Dimension | What to look for | Example findings |
 |-----------|-----------------|------------------|
@@ -166,8 +164,7 @@ Each Discovery round should focus on 2-3 dimensions. Rotate so all dimensions ar
 
 Launch Agent 1 (Researcher):
 - Read the ENTIRE codebase AND all supporting files (README, install scripts, config)
-- Pick 2-3 dimensions from the table above (rotate from previous rounds)
-- Analyze deeply within those dimensions
+- Check ALL 10 dimensions in the table above — every round, every dimension
 - Cross-reference with recent logs and industry best practices
 - Produce prioritized findings
 
