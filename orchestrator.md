@@ -218,5 +218,6 @@ If the Manager says PASS → STOP.
 - ALWAYS run tests before committing
 - ALWAYS verify syntax before committing
 - If unsure about a fix, label "needs-human" and skip
+- Maximum 5 issues per Fix Mode cycle (quality over quantity — fix carefully, one at a time)
 - Maximum 10 Discovery→Fix loops per cron trigger (to avoid infinite loops)
 - UX/architectural changes ALWAYS get "needs-human" label
