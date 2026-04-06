@@ -44,14 +44,14 @@ Launch a subagent with that personality. Give it:
 
 Wait for its critique.
 
-### Debate Loop (max 3 rounds)
+### Debate Loop (max 10 rounds)
 If the Critic says NEEDS REVISION:
 1. Send the critique back to a new Researcher subagent
 2. Get revised plan
 3. Send to a new Critic subagent
 4. Repeat until APPROVED or max rounds reached
 
-If after 3 rounds still not approved, label the issue "needs-human" and move on.
+If after 10 rounds still not approved, label the issue "needs-human" and move on.
 
 ### Agent 3 — Executor
 Read the personality from `~/.local/agent-framework/agents/executor.md`.
@@ -69,7 +69,7 @@ After the Executor finishes:
 2. Run the Critic as a reviewer — any remaining issues?
 
 If both approve: push and close the issue with a summary comment.
-If either rejects: send back to Executor for revision (max 2 revision rounds).
+If either rejects: send back to Executor for revision (max 10 revision rounds).
 
 ## Step 6: Cleanup
 
