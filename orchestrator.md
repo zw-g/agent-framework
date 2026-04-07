@@ -143,7 +143,11 @@ DO NOT STOP HERE. You MUST run Discovery after all issues are fixed.
 
 ## PHASE 2: DISCOVERY MODE
 
-Discovery is NOT limited to code bugs. It covers ALL dimensions of product quality.
+Discovery is NOT limited to code bugs. It covers ALL dimensions of product quality AND proposes new features.
+
+### CRITICAL: Fresh Eyes Every Round
+
+Each Discovery round MUST analyze with FRESH EYES. Do NOT reference previous round numbers or assume "nothing changed." The AI must re-read the code, re-think every dimension, and explore deeply every time. Past rounds finding nothing does NOT mean this round should shortcut. Think expansively — what could be BETTER, not just what is BROKEN.
 
 ### Discovery Dimensions (check ALL every round)
 
@@ -159,13 +163,16 @@ Discovery is NOT limited to code bugs. It covers ALL dimensions of product quali
 | **Testing** | Missing tests, untested edge cases, test infrastructure | "No automated test for the correction detection flow" |
 | **Architecture** | Code organization, modularity, maintainability | "voice_input.py is 2650 lines — consider splitting" |
 | **DevOps** | Install process, update mechanism, error reporting | "install.sh doesn't verify Python version before setup" |
+| **Feature Innovation** | What features do industry-leading products have that we don't? What would make this product significantly better? Research competitors (Whisper Flow, SuperWhisper, Talon Voice, macOS Dictation, Dragon NaturallySpeaking) and propose features worth adding. | "Wispr Flow has voice commands (e.g., 'delete that', 'new line'). We should add basic voice commands." |
 
 ### Step 7: Run Deep Analysis
 
 Launch Agent 1 (Researcher):
 - Read the ENTIRE codebase AND all supporting files (README, install scripts, config)
-- Check ALL 10 dimensions in the table above — every round, every dimension
-- Cross-reference with recent logs and industry best practices
+- Check ALL 11 dimensions in the table above — every round, every dimension
+- For Feature Innovation: research what competitors offer, what industry trends exist, and what nice-to-have features could elevate the product
+- Think EXPANSIVELY — even if the code is perfect, there are always features to propose
+- Cross-reference with industry best practices
 - Produce prioritized findings
 
 ### Step 8: Critique the Analysis
