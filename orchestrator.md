@@ -175,21 +175,24 @@ Launch Agent 1 (Researcher):
 - Cross-reference with industry best practices
 - Produce prioritized findings
 
-### Step 8: Critique the Analysis
+### Step 8: Critique the Analysis (MANDATORY — never skip)
 
-Launch Agent 2 (Critic):
-- Verify each finding against actual code
-- Remove theoretical/already-fixed issues
-- Add missed issues
-- Produce consensus list
+Launch Agent 2 (Critic) with ALL findings from Step 7. The Critic's job is to FILTER:
+- REJECT findings that are theoretical, cosmetic, already handled, or not worth the effort
+- REJECT findings that have been reported multiple times without being fixed (if it wasn't worth fixing before, it's probably not worth fixing now)
+- APPROVE only findings that are genuinely impactful and clearly worth implementing
+- Challenge the severity: "Is this really Medium? Or is it Low/Trivial noise?"
+- Ask: "Would a user notice if we DON'T fix this?"
+
+The Critic should aggressively cut the list. If Researcher found 24 items, a good Critic might approve 5-8. Quality over quantity.
 
 ### Step 9: Debate (max 10 rounds)
 
-Researcher ↔ Critic debate until agreement.
+Researcher ↔ Critic debate until agreement on the final list.
 
-### Step 10: Classify and Create Issues
+### Step 10: Create Issues ONLY for Approved Findings
 
-For each agreed finding:
+For each CRITIC-APPROVED finding:
 
 **Auto-fix** (bugs, performance, code quality):
 → Create GitHub issue FIRST → then Phase 1 will fix it
